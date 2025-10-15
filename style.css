@@ -1,0 +1,13 @@
+pre {
+    min-width: 344px;
+    max-width: 600px;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+.icon {
+    position: relative;
+    left: -2em;
+    height: 10em;
+}
