@@ -17,7 +17,7 @@ DEVANSHU SEN PANDEY
 
 [ ABOUT ]
 
-20 years old.
+Age: <span class="age" id="age">calculating...</span>.
 CS + Stats at Grinnell College. 
 Prev @ NVIDIA & startups.
 
@@ -45,6 +45,30 @@ GitHub: <a href="https://github.com/devanshusp" target="_blank">github.com/devan
 
                       ~thanks for visiting
 </pre>
+  <script>
+    const ageDisplay = document.getElementById('age');
+
+    // Oct 26, 2004, UTC+5:30
+    const birthTime = new Date(Date.UTC(2004, 9, 26, 9, 30, 0));
+
+    function updateAge() {
+      const now = new Date();
+      const diff = now - birthTime;
+
+      const years = Math.floor(diff / (1000 * 60 * 60 * 24 * 365.2425));
+      const remainingAfterYears = diff - years * (1000 * 60 * 60 * 24 * 365.2425);
+
+      const days = Math.floor(remainingAfterYears / (1000 * 60 * 60 * 24));
+      const remainingAfterDays = remainingAfterYears - days * (1000 * 60 * 60 * 24);
+
+      const seconds = remainingAfterDays / 1000;
+
+      ageDisplay.textContent = `${years} years, ${days} days, ${seconds.toFixed(1)} seconds`;
+    }
+
+    updateAge();
+    setInterval(updateAge, 33); // refresh ~30x/sec
+  </script>
 </body>
 
 </html>
