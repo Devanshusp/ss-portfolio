@@ -1,16 +1,15 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="icon" type="image/png" href="assets/icon.png" />
+        <title>Devanshu Sen Pandey</title>
+        <link rel="stylesheet" href="style.css" />
+    </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="icon" type="image/png" href="assets/icon.png" />
-  <title>Devanshu Sen Pandey</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-
-<body>
-  <pre>
+    <body>
+        <pre>
 DEVANSHU SEN PANDEY
 <img class="icon" src="assets/icon.png" alt="icon" />
 ───────────────────────────────────────────
@@ -18,18 +17,19 @@ DEVANSHU SEN PANDEY
 [ ABOUT ]
 
 Age: <span class="age" id="age">calculating...</span>.
-CS + Stats at Grinnell College. 
+CS + Stats at Grinnell College.
 Prev @ NVIDIA & startups.
 
-Building software to fix how humans connect with each other.
+Some <a href="https://www.instagram.com/devanshu.cam/" target="_blank">photos</a> I took.
 
-Side quests: six pack + trading to $10M.
+Goals:
+- be as much of a net positive to humanity
 
 ───────────────────────────────────────────
 
 [ WRITING ]
 
-<a href="writing/life-metrics.html">your life in numbers >></a>
+<a href="writing/reviews.html">my reviews >></a>
 <a href="writing/the-ultimate-metric-time.html">the ultimate metric: time >></a>
 <a href="writing/tech-i-use.html">tech i use >></a>
 <a href="writing/my-life-by-years.html">my life by years >></a>
@@ -47,30 +47,35 @@ Schedule: <a href="https://calendar.app.google/zVanHWHV5sXZBpGP8" target="_blank
 
                       ~thanks for visiting
 </pre>
-  <script>
-    const ageDisplay = document.getElementById('age');
+        <script>
+            const ageDisplay = document.getElementById("age");
 
-    // Oct 26, 2004, UTC+5:30
-    const birthTime = new Date(Date.UTC(2004, 9, 26, 19, 59, 0));
+            // Oct 26, 2004, UTC+5:30
+            const birthTime = new Date(Date.UTC(2004, 9, 26, 19, 59, 0));
 
-    function updateAge() {
-      const now = new Date();
-      const diff = now - birthTime;
+            function updateAge() {
+                const now = new Date();
+                const diff = now - birthTime;
 
-      const years = Math.floor(diff / (1000 * 60 * 60 * 24 * 365.2425));
-      const remainingAfterYears = diff - years * (1000 * 60 * 60 * 24 * 365.2425);
+                const years = Math.floor(
+                    diff / (1000 * 60 * 60 * 24 * 365.2425),
+                );
+                const remainingAfterYears =
+                    diff - years * (1000 * 60 * 60 * 24 * 365.2425);
 
-      const days = Math.floor(remainingAfterYears / (1000 * 60 * 60 * 24));
-      const remainingAfterDays = remainingAfterYears - days * (1000 * 60 * 60 * 24);
+                const days = Math.floor(
+                    remainingAfterYears / (1000 * 60 * 60 * 24),
+                );
+                const remainingAfterDays =
+                    remainingAfterYears - days * (1000 * 60 * 60 * 24);
 
-      const seconds = remainingAfterDays / 1000;
+                const seconds = remainingAfterDays / 1000;
 
-      ageDisplay.textContent = `${years} years, ${days} days, ${seconds.toFixed(1)} seconds`;
-    }
+                ageDisplay.textContent = `${years} years, ${days} days, ${seconds.toFixed(1)} seconds`;
+            }
 
-    updateAge();
-    setInterval(updateAge, 33); // refresh ~30x/sec
-  </script>
-</body>
-
+            updateAge();
+            setInterval(updateAge, 33); // refresh ~30x/sec
+        </script>
+    </body>
 </html>
