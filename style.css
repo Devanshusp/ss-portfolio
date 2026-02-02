@@ -11,3 +11,20 @@ pre {
     left: -2em;
     height: 10em;
 }
+
+/* verdict badges */
+.verdict {
+    display: inline-block;
+    font-weight: 700;
+}
+
+/* specific verdicts */
+.verdict-watch {
+    background-color: #f1c40f; /* warm yellow */
+    color: #000;
+}
+
+.verdict-skip {
+    background-color: #95a5a6; /* muted gray */
+    color: #000;
+}
